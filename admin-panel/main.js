@@ -1,4 +1,4 @@
-const backendUrl = "https://api.pokerbot.dk"
+const backendUrl = localStorage.getItem("base-url") ?? "https://api.pokerbot.dk";
 const apiKey = localStorage.getItem("api-key");
 
 async function loadTables() {
