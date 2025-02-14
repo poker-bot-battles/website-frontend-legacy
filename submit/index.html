@@ -110,7 +110,8 @@
     </main>
 
     <script>
-      const baseURL = "https://api.pokerbot.dk";
+      const baseURL =
+        localStorage.getItem("base-url") ?? "https://api.pokerbot.dk";
 
       document
         .getElementById("uploadForm")
