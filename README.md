@@ -1,7 +1,14 @@
-# Run using Docker
+# Run using Docker Compose
 
+```bash
+docker compose up
 ```
-docker build . -t pokerfrontend
 
-docker run -v $(pwd):/app -p 4000:4000 pokerfrontend
+## Local storage options
+
+These options should be set in the browsers local storage:
+
+```bash
+api-key # your API key for the backend.
+base-url # the URL for the backend. Defaults to "api.pokerbot.dk"
 ```
