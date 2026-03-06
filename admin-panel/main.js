@@ -39,13 +39,15 @@ function appendChildList(parent, children) {
 }
 
 function makeTableDiv(table, tableName) {
-  // Base elements
-  const tableDiv = makeElement("div", "table");
-  const nameH2 = makeElement("h2", "", "Table: " + tableName);
-  const headerBox = makeElement("div", "headerBox");
-  const runButton = makeElement("button", "", "Run", () => runTable(tableName));
-  headerBox.appendChild(nameH2);
-  headerBox.appendChild(runButton);
+    // Base elements
+    const tableDiv = makeElement("div", "table");
+    const nameH2 = makeElement("h2", "", "Table: " + tableName);
+    const bots = makeElement("p", "", "Bots: " + table.filter((file) => !file.endsWith(".json")).length + "/10");
+    const headerBox = makeElement("div", "headerBox")
+    const runButton = makeElement("button", "", "Run", () => runTable(tableName))
+    headerBox.appendChild(nameH2)
+    headerBox.appendChild(bots)
+    headerBox.appendChild(runButton)
 
   let resultFileName = "none";
   const filesList = makeElement("ul", "filesList");
